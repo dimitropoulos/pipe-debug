@@ -9,7 +9,7 @@ pipeline debugging and performance measuring microtool.
 </p>
 
 <p align="center">
-Zero dependency. TypeScript-optimized.  Autocurried.  Immutable.  Short Circuitig.
+Zero dependency. TypeScript-optimized.  Autocurried.  Immutable.  Short Circuiting.
 </p>
 
 ## Why it's useful
@@ -105,7 +105,7 @@ This outputs a performance report with the milliseconds between each step:
 
 > Q: how can I turn a bunch of statements off all at once without having to comment them out or remove them?
 >
-> A: just use `setDebugMode` to `false`.  Don't worry, it short circuits so aside from the cost of the function closure and the single if statment at the beginning of the function source, there should be no performance impact.
+> A: just use `setDebugMode` to `false`.  Don't worry, it short circuits so aside from the cost of the function closure and the single if statement at the beginning of the function source, there should be no performance impact.
 
 > Q: Are you using `Date.now()` for the performance timings.
 >
