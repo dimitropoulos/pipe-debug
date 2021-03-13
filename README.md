@@ -57,6 +57,30 @@ const simpleArray = pipe(
 )([1, 2, 3, 4, 5]);
 ```
 
+## Actual `debugger` lines
+
+In the above examples where you see `customLogger`, consider that you can pass something like this:
+
+```ts
+pipe(
+...
+  debugPipe(() => { debugger; }),
+...
+)()
+```
+
+or this
+
+```ts
+array
+...
+  .map(debugArray(() => { debugger; }))
+...
+
+```
+
+Now, if you're one of those cool-kids that has a debugger actually working in your project, you can add breakpoints in this way.
+
 ## Performance Metrics
 
 But simple logging isn't all this can do.  It also can track the time it takes for each portion of your pipe, if you're doing pipeline style.
@@ -93,7 +117,7 @@ This outputs a performance report with the milliseconds between each step:
 
 > Q: What's the test coverage for this like?
 >
-> A: 100%.  Now, I haven't (yet?) instituted [istanbul](https://istanbul.js.org/) to prove it
+> A: 100%.  Now, I haven't (yet?) instituted [istanbul](https://istanbul.js.org/) to prove it.
 
 > Q: How many dependencies are there?
 >
